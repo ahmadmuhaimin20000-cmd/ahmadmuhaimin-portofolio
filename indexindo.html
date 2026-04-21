@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ahmad Muhaimin, S.E. — Finance & Project Administrator, Cost Control Specialist. Google PM Certified. Brevet Pajak A&B. 2 proyek aktif, IDR 1.6 miliar.">
+<meta property="og:title" content="Ahmad Muhaimin — Finance & Project Administrator">
+<meta property="og:description" content="Cost Control Specialist · Google PM Certified · Brevet Pajak A&B · IDR 1,616 Miliar dikelola">
+<title>Ahmad Muhaimin, S.E. — Finance & Project Administrator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ─── RESET & ROOT ─────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0a0d14;
+  --paper:#f4f1ea;
+  --cream:#faf8f3;
+  --accent:#bf5a16;
+  --accent2:#1a538a;
+  --green:#2a7048;
+  --muted:#6b6257;
+  --rule:#ddd8cf;
+  --tag:#e9e4da;
+  --white:#ffffff;
+  --shadow:0 2px 24px rgba(10,13,20,0.08);
+  --nav-h:60px;
+}
+html{scroll-behavior:smooth;font-size:15px}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Epilogue',sans-serif;
+  font-weight:300;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+::selection{background:var(--accent);color:#fff}
+
+/* ─── SCROLLBAR ────────────────────────────────────────────────────── */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--paper)}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:10px}
+
+/* ─── NAV ──────────────────────────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  height:var(--nav-h);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;
+  background:rgba(244,241,234,0.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--rule);
+  transition:box-shadow .3s;
+}
+nav.scrolled{box-shadow:0 2px 20px rgba(10,13,20,0.1)}
+.nav-brand{
+  font-family:'DM Mono',monospace;
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);text-decoration:none;
+}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{
+  font-family:'DM Mono',monospace;font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--accent)}
+.nav-menu{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.nav-menu span{display:block;width:22px;height:1.5px;background:var(--ink);margin:5px 0;transition:.3s}
+
+/* ─── HERO ─────────────────────────────────────────────────────────── */
+.hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  padding-top:var(--nav-h);
+  position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,var(--ink) 0%,#1a2035 100%);
+  clip-path:polygon(0 0,55% 0,45% 100%,0 100%);
+  z-index:0;
+}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    0deg,transparent,transparent 40px,
+    rgba(255,255,255,.025) 40px,rgba(255,255,255,.025) 41px
+  ),repeating-linear-gradient(
+    90deg,transparent,transparent 40px,
+    rgba(255,255,255,.025) 40px,rgba(255,255,255,.025) 41px
+  );
+}
+.hero-accent-circle{
+  position:absolute;
+  width:420px;height:420px;border-radius:50%;
+  border:80px solid rgba(191,90,22,.12);
+  top:-80px;left:10%;z-index:1;
+  animation:rotateSlow 30s linear infinite;
+}
+@keyframes rotateSlow{to{transform:rotate(360deg)}}
+.hero-left{
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 60px 80px 80px;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--accent);
+  margin-bottom:28px;
+  animation:fadeUp .8s ease both;
+}
+.hero-tag::before{
+  content:'';display:block;width:28px;height:1.5px;background:var(--accent);
+}
+.hero-h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(36px,4.5vw,58px);
+  font-weight:400;line-height:1.08;
+  color:var(--white);margin-bottom:24px;
+  animation:fadeUp .8s ease .1s both;
+}
+.hero-h1 em{color:var(--accent);font-style:italic}
+.hero-desc{
+  font-size:14px;line-height:1.85;
+  color:rgba(244,241,234,.65);
+  max-width:440px;margin-bottom:40px;
+  animation:fadeUp .8s ease .2s both;
+}
+.hero-actions{
+  display:flex;gap:14px;flex-wrap:wrap;
+  animation:fadeUp .8s ease .3s both;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 26px;font-family:'DM Mono',monospace;
+  font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  text-decoration:none;cursor:pointer;border:none;
+  transition:all .25s;
+}
+.btn-primary{
+  background:var(--accent);color:#fff;
+}
+.btn-primary:hover{background:#a34d12;transform:translateY(-2px)}
+.btn-outline{
+  background:transparent;color:rgba(244,241,234,.8);
+  border:1px solid rgba(244,241,234,.3);
+}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.hero-right{
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:80px 80px 80px 60px;gap:16px;
+  animation:fadeUp .8s ease .4s both;
+}
+.kpi-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  padding:22px 24px;
+  display:flex;align-items:center;gap:20px;
+  transition:all .25s;
+  cursor:default;
+}
+.kpi-card:hover{
+  background:rgba(255,255,255,.1);
+  transform:translateX(6px);
+  border-color:rgba(191,90,22,.5);
+}
+.kpi-icon{
+  width:42px;height:42px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(191,90,22,.2);
+  font-size:18px;flex-shrink:0;
+}
+.kpi-val{
+  font-family:'Playfair Display',serif;font-size:26px;
+  color:var(--accent);line-height:1;margin-bottom:4px;
+}
+.kpi-label{
+  font-family:'DM Mono',monospace;font-size:9px;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(244,241,234,.5);
+}
+
+/* ─── ANIMATIONS ───────────────────────────────────────────────────── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ─── SECTIONS ─────────────────────────────────────────────────────── */
+section{padding:96px 0}
+.container{max-width:1100px;margin:0 auto;padding:0 40px}
+.section-label{
+  font-family:'DM Mono',monospace;font-size:10px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--accent);
+  margin-bottom:12px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-label::before{content:'';display:block;width:24px;height:1.5px;background:var(--accent)}
+.section-title{
+  font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,42px);
+  font-weight:400;line-height:1.15;margin-bottom:16px;
+}
+.section-title em{color:var(--accent);font-style:italic}
+.section-intro{
+  font-size:14px;color:var(--muted);max-width:640px;
+  line-height:1.8;margin-bottom:56px;
+}
+
+/* ─── DIVIDER ──────────────────────────────────────────────────────── */
+.divider{
+  height:1px;background:var(--rule);
+  margin:0 40px;
+}
+
+/* ─── ABOUT / SKILLS ───────────────────────────────────────────────── */
+#skills{background:var(--cream)}
+.skills-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+}
+.skill-item{
+  display:flex;align-items:center;gap:14px;
+  padding:14px 18px;background:var(--white);
+  border:1px solid var(--rule);
+  transition:all .2s;
+}
+.skill-item:hover{border-color:var(--accent);transform:translateX(4px)}
+.skill-name{flex:1;font-size:13px;font-weight:500}
+.skill-track{width:70px;height:3px;background:var(--rule);border-radius:2px;flex-shrink:0}
+.skill-fill{height:100%;border-radius:2px;background:var(--accent)}
+.skill-lvl{
+  font-family:'DM Mono',monospace;font-size:9px;
+  color:var(--muted);letter-spacing:.08em;text-transform:uppercase;
+  width:52px;text-align:right;flex-shrink:0;
+}
+
+/* ─── PROJECTS ─────────────────────────────────────────────────────── */
+#projects{background:var(--paper)}
+.project-card{
+  border:1px solid var(--rule);margin-bottom:32px;
+  background:var(--white);overflow:hidden;
+  transition:box-shadow .3s;
+}
+.project-card:hover{box-shadow:var(--shadow)}
+.project-header{
+  background:var(--ink);
+  padding:28px 32px;
+  display:flex;justify-content:space-between;align-items:flex-start;
+  gap:20px;flex-wrap:wrap;
+}
+.project-num{
+  font-family:'DM Mono',monospace;font-size:10px;
+  letter-spacing:.2em;color:var(--accent);margin-bottom:8px;
+}
+.project-name{
+  font-family:'Playfair Display',serif;font-size:22px;
+  font-weight:400;color:var(--white);margin-bottom:6px;
+}
+.project-meta{font-size:12px;color:rgba(244,241,234,.5)}
+.project-badge{
+  background:rgba(191,90,22,.2);border:1px solid rgba(191,90,22,.4);
+  color:var(--accent);padding:8px 16px;
+  font-family:'DM Mono',monospace;font-size:11px;
+  letter-spacing:.1em;white-space:nowrap;flex-shrink:0;
+  align-self:flex-start;
+}
+.project-tags{
+  display:flex;flex-wrap:wrap;gap:6px;
+  padding:16px 32px;background:var(--tag);
+  border-bottom:1px solid var(--rule);
+}
+.tag{
+  font-family:'DM Mono',monospace;font-size:9px;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);padding:4px 10px;
+  background:var(--paper);border:1px solid var(--rule);
+}
+.project-body{padding:32px}
+.project-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.contrib-block h4{
+  font-family:'DM Mono',monospace;font-size:9px;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;
+  padding-bottom:10px;border-bottom:1px solid var(--rule);
+}
+.contrib-block ul{list-style:none}
+.contrib-block ul li{
+  font-size:13px;padding:7px 0 7px 16px;position:relative;
+  border-bottom:1px dashed var(--rule);color:#3a3a3a;line-height:1.6;
+}
+.contrib-block ul li::before{
+  content:'→';position:absolute;left:0;color:var(--accent);font-size:11px;top:9px;
+}
+.contrib-block ul li:last-child{border-bottom:none}
+.project-kpis{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+  margin-top:24px;padding-top:24px;
+  border-top:1px solid var(--rule);
+}
+.mini-kpi{
+  text-align:center;padding:16px 10px;
+  border:1px solid var(--rule);
+  background:var(--cream);
+}
+.mini-kpi-val{
+  font-family:'Playfair Display',serif;font-size:20px;
+  color:var(--accent);margin-bottom:4px;
+}
+.mini-kpi-label{
+  font-family:'DM Mono',monospace;font-size:8.5px;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+}
+
+/* ─── SYSTEM ARCHITECTURE ──────────────────────────────────────────── */
+#system{background:var(--ink);color:var(--white)}
+#system .section-label{color:var(--accent)}
+#system .section-title{color:var(--white)}
+#system .section-intro{color:rgba(244,241,234,.55)}
+.arch-table{width:100%;border-collapse:collapse;margin-top:8px}
+.arch-table th{
+  background:rgba(255,255,255,.06);
+  font-family:'DM Mono',monospace;font-size:9px;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(244,241,234,.5);font-weight:400;
+  padding:12px 16px;text-align:left;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.arch-table td{
+  padding:12px 16px;font-size:13px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  vertical-align:top;line-height:1.6;
+  color:rgba(244,241,234,.8);
+}
+.arch-table td:first-child{
+  font-family:'DM Mono',monospace;font-size:11.5px;
+  color:var(--accent);white-space:nowrap;
+}
+.arch-table tr:last-child td{border-bottom:none}
+.arch-table tr:hover td{background:rgba(255,255,255,.03)}
+.arch-proj{
+  font-family:'DM Mono',monospace;font-size:9.5px;
+  color:rgba(191,90,22,.7);letter-spacing:.06em;
+}
+
+/* ─── FINANCIAL ────────────────────────────────────────────────────── */
+#financial{background:var(--cream)}
+.fin-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fin-card{
+  padding:28px 24px;background:var(--white);
+  border:1px solid var(--rule);position:relative;
+  overflow:hidden;transition:all .25s;
+}
+.fin-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.fin-card::before{
+  content:'';display:block;width:40px;height:3px;
+  margin-bottom:20px;
+}
+.fin-card.orange::before{background:var(--accent)}
+.fin-card.green::before{background:var(--green)}
+.fin-card.blue::before{background:var(--accent2)}
+.fin-card-label{
+  font-family:'DM Mono',monospace;font-size:9px;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:10px;
+}
+.fin-card-val{
+  font-family:'Playfair Display',serif;font-size:26px;
+  line-height:1.1;margin-bottom:8px;
+}
+.fin-card.orange .fin-card-val{color:var(--accent)}
+.fin-card.green .fin-card-val{color:var(--green)}
+.fin-card.blue .fin-card-val{color:var(--accent2)}
+.fin-card-sub{font-size:12px;color:var(--muted);line-height:1.6}
+.fin-card-bg{
+  position:absolute;right:-20px;bottom:-20px;
+  font-size:80px;opacity:.04;line-height:1;pointer-events:none;
+}
+
+/* ─── TOOLS ────────────────────────────────────────────────────────── */
+#tools{background:var(--paper)}
+.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tool-row{
+  display:flex;align-items:center;gap:16px;
+  padding:16px 20px;background:var(--white);
+  border:1px solid var(--rule);transition:all .2s;
+}
+.tool-row:hover{border-color:var(--accent)}
+.tool-icon{
+  width:36px;height:36px;display:flex;align-items:center;
+  justify-content:center;background:var(--cream);
+  font-size:16px;flex-shrink:0;border:1px solid var(--rule);
+}
+.tool-name{font-size:13px;font-weight:600;flex:1}
+.tool-purpose{font-size:11.5px;color:var(--muted);line-height:1.5}
+.stars{color:var(--accent);font-size:12px;letter-spacing:2px;flex-shrink:0}
+
+/* ─── VALUE PROP ───────────────────────────────────────────────────── */
+#value{background:var(--ink)}
+#value .section-label{color:var(--accent)}
+#value .section-title{color:var(--white)}
+#value .section-intro{color:rgba(244,241,234,.55)}
+.vp-list{display:flex;flex-direction:column;gap:16px}
+.vp-item{
+  display:grid;grid-template-columns:64px 1fr;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  overflow:hidden;transition:all .25s;
+}
+.vp-item:hover{border-color:rgba(191,90,22,.4);transform:translateX(6px)}
+.vp-num{
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(191,90,22,.1);
+  font-family:'Playfair Display',serif;font-size:28px;
+  color:rgba(191,90,22,.5);font-style:italic;
+}
+.vp-content{padding:24px 28px}
+.vp-title{
+  font-size:15px;font-weight:600;color:var(--white);
+  margin-bottom:8px;
+}
+.vp-desc{font-size:13px;color:rgba(244,241,234,.6);line-height:1.75}
+
+/* ─── CONTACT / FOOTER ─────────────────────────────────────────────── */
+#contact{
+  background:var(--paper);
+  border-top:1px solid var(--rule);
+  padding:64px 0;text-align:center;
+}
+.contact-title{
+  font-family:'Playfair Display',serif;font-size:36px;
+  font-weight:400;margin-bottom:12px;
+}
+.contact-sub{
+  font-size:14px;color:var(--muted);margin-bottom:36px;
+}
+.contact-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+footer{
+  background:var(--ink);color:rgba(244,241,234,.4);
+  padding:28px 40px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;
+}
+footer span{color:var(--accent)}
+
+/* ─── CERTIFICATIONS ───────────────────────────────────────────────── */
+#certifications{background:var(--paper)}
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.cert-card{
+  background:var(--white);border:1px solid var(--rule);
+  overflow:hidden;transition:all .3s;position:relative;
+}
+.cert-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.cert-card-top{
+  padding:28px 28px 20px;
+  display:flex;align-items:flex-start;gap:18px;
+}
+.cert-logo{
+  width:52px;height:52px;border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;flex-shrink:0;
+  border:1px solid var(--rule);background:var(--cream);
+}
+.cert-issuer{
+  font-family:'DM Mono',monospace;font-size:9px;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:6px;
+}
+.cert-name{
+  font-family:'Playfair Display',serif;font-size:17px;
+  font-weight:400;line-height:1.25;color:var(--ink);
+  margin-bottom:6px;
+}
+.cert-date{
+  font-family:'DM Mono',monospace;font-size:10px;
+  color:var(--accent);letter-spacing:.08em;
+}
+.cert-divider{height:1px;background:var(--rule);margin:0 28px}
+.cert-body{padding:18px 28px 24px}
+.cert-desc{font-size:12.5px;color:var(--muted);line-height:1.7;margin-bottom:14px}
+.cert-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.cert-tag{
+  font-family:'DM Mono',monospace;font-size:8.5px;
+  letter-spacing:.08em;text-transform:uppercase;
+  padding:3px 9px;border:1px solid var(--rule);
+  color:var(--muted);background:var(--cream);
+}
+.cert-scores{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;
+  margin-bottom:16px;
+}
+.score-item{
+  padding:10px 12px;background:var(--cream);
+  border:1px solid var(--rule);
+}
+.score-subj{font-size:11px;color:var(--muted);margin-bottom:2px}
+.score-val{
+  font-family:'DM Mono',monospace;font-size:13px;font-weight:500;
+}
+.score-val.aplus{color:var(--green)}
+.score-val.a{color:var(--accent2)}
+.score-val.b{color:var(--muted)}
+.cert-link{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:'DM Mono',monospace;font-size:10px;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:border-color .2s;
+}
+.cert-link:hover{border-color:var(--accent)}
+.cert-ribbon{
+  position:absolute;top:18px;right:-28px;
+  background:var(--accent);color:#fff;
+  font-family:'DM Mono',monospace;font-size:8.5px;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:4px 36px;transform:rotate(45deg);
+  box-shadow:0 2px 8px rgba(191,90,22,.3);
+}
+.cert-ribbon.green{background:var(--green)}
+
+/* ─── PROFILE HEADER UPDATE ────────────────────────────────────────── */
+.hero-name-tag{
+  font-family:'DM Mono',monospace;font-size:11px;
+  color:rgba(244,241,234,.5);letter-spacing:.1em;
+  margin-bottom:8px;
+}
+
+/* ─── MOBILE NAV DRAWER ────────────────────────────────────────────── */
+.mobile-nav{
+  display:none;position:fixed;inset:0;z-index:200;
+  background:var(--ink);flex-direction:column;
+  align-items:center;justify-content:center;gap:32px;
+}
+.mobile-nav.open{display:flex}
+.mobile-nav a{
+  font-family:'Playfair Display',serif;font-size:28px;
+  color:var(--white);text-decoration:none;
+  transition:color .2s;
+}
+.mobile-nav a:hover{color:var(--accent)}
+.mobile-close{
+  position:absolute;top:24px;right:28px;
+  background:none;border:none;color:var(--white);
+  font-size:28px;cursor:pointer;
+}
+
+/* ─── RESPONSIVE ───────────────────────────────────────────────────── */
+@media(max-width:900px){
+  nav{padding:0 24px}
+  .nav-links{display:none}
+  .nav-menu{display:block}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-bg{clip-path:polygon(0 0,100% 0,100% 55%,0 65%)}
+  .hero-left{padding:100px 32px 48px}
+  .hero-right{padding:32px 32px 64px;gap:12px}
+  .kpi-card{padding:16px 18px}
+  .kpi-val{font-size:20px}
+  section{padding:64px 0}
+  .container{padding:0 24px}
+  .skills-grid,.project-cols,.fin-cards,.tools-grid{grid-template-columns:1fr}
+  .project-kpis{grid-template-columns:repeat(3,1fr)}
+  .arch-table{display:block;overflow-x:auto}
+  footer{flex-direction:column;gap:10px;text-align:center}
+}
+@media(max-width:520px){
+  .project-kpis{grid-template-columns:1fr 1fr}
+  .hero-h1{font-size:32px}
+  .contact-title{font-size:26px}
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     NAV
+═════════════════════════════════════════════════════════ -->
+<nav id="main-nav">
+  <a class="nav-brand" href="#">Ahmad Muhaimin · FPA</a>
+  <ul class="nav-links">
+    <li><a href="#skills">Kompetensi</a></li>
+    <li><a href="#projects">Proyek</a></li>
+    <li><a href="#system">Sistem</a></li>
+    <li><a href="#financial">Financial</a></li>
+    <li><a href="#certifications">Sertifikasi</a></li>
+    <li><a href="#value">Value</a></li>
+    <li><a href="#contact">Kontak</a></li>
+  </ul>
+  <button class="nav-menu" onclick="openMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-close" onclick="closeMenu()">✕</button>
+  <a href="#skills" onclick="closeMenu()">Kompetensi</a>
+  <a href="#projects" onclick="closeMenu()">Proyek</a>
+  <a href="#system" onclick="closeMenu()">Sistem</a>
+  <a href="#financial" onclick="closeMenu()">Financial</a>
+  <a href="#certifications" onclick="closeMenu()">Sertifikasi</a>
+  <a href="#value" onclick="closeMenu()">Value</a>
+  <a href="#contact" onclick="closeMenu()">Kontak</a>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     HERO
+═════════════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-accent-circle"></div>
+
+  <div class="hero-left">
+    <div class="hero-tag">Finance &amp; Project Administrator</div>
+    <div class="hero-name-tag">Ahmad Muhaimin, S.E.</div>
+    <h1 class="hero-h1">
+      Cost Control<br><em>Specialist</em>
+    </h1>
+    <p class="hero-desc">
+      Membangun sistem administrasi keuangan proyek konstruksi end-to-end — 
+      dari RAB, BoQ, procurement tracking, general ledger, hingga budget forecasting — 
+      dengan rekam jejak 2 proyek aktif senilai total <strong style="color:var(--accent)">IDR 1,616 miliar</strong>.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+      <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="kpi-card">
+      <div class="kpi-icon">💼</div>
+      <div>
+        <div class="kpi-val">2 Proyek</div>
+        <div class="kpi-label">Aktif Simultan</div>
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">📊</div>
+      <div>
+        <div class="kpi-val">IDR 1,616 Jt</div>
+        <div class="kpi-label">Total Nilai Kontrak</div>
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">✅</div>
+      <div>
+        <div class="kpi-val">99,97%</div>
+        <div class="kpi-label">Budget Accuracy</div>
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">🧾</div>
+      <div>
+        <div class="kpi-val">100%</div>
+        <div class="kpi-label">Tax Compliance</div>
+      </div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">📁</div>
+      <div>
+        <div class="kpi-val">165+ Transaksi</div>
+        <div class="kpi-label">Tercatat Terverifikasi</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SKILLS
+═════════════════════════════════════════════════════════ -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label reveal">Kompetensi</div>
+    <h2 class="section-title reveal">Core <em>Competencies</em></h2>
+    <p class="section-intro reveal">
+      Keahlian teknikal yang terverifikasi melalui implementasi nyata di 2 proyek konstruksi aktif,
+      bukan sekadar pengetahuan teoritis.
+    </p>
+    <div class="skills-grid reveal">
+      <div class="skill-item">
+        <span class="skill-name">Material Control &amp; Inventory Tracking</span>
+        <div class="skill-track"><div class="skill-fill" style="width:95%"></div></div>
+        <span class="skill-lvl">Expert</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">RAB &amp; BoQ Preparation</span>
+        <div class="skill-track"><div class="skill-fill" style="width:95%"></div></div>
+        <span class="skill-lvl">Expert</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">PO / Invoice / Payment Tracking</span>
+        <div class="skill-track"><div class="skill-fill" style="width:95%"></div></div>
+        <span class="skill-lvl">Expert</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Progress Billing (Termin)</span>
+        <div class="skill-track"><div class="skill-fill" style="width:92%"></div></div>
+        <span class="skill-lvl">Expert</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Cash Flow Monitoring</span>
+        <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
+        <span class="skill-lvl">Expert</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Budget vs Realisasi (Variance)</span>
+        <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
+        <span class="skill-lvl">Expert</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">General Ledger &amp; Double-Entry</span>
+        <div class="skill-track"><div class="skill-fill" style="width:88%"></div></div>
+        <span class="skill-lvl">Advanced</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">PPN / PPh Final / PPh22 / PPh23</span>
+        <div class="skill-track"><div class="skill-fill" style="width:88%"></div></div>
+        <span class="skill-lvl">Advanced</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Budget Forecasting &amp; Burn Rate</span>
+        <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
+        <span class="skill-lvl">Advanced</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Supplier Analysis &amp; Procurement</span>
+        <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
+        <span class="skill-lvl">Advanced</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Multi-Project Administration</span>
+        <div class="skill-track"><div class="skill-fill" style="width:88%"></div></div>
+        <span class="skill-lvl">Advanced</span>
+      </div>
+      <div class="skill-item">
+        <span class="skill-name">Dashboard &amp; Financial Reporting</span>
+        <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
+        <span class="skill-lvl">Advanced</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     PROJECTS
+═════════════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label reveal">Portofolio Proyek</div>
+    <h2 class="section-title reveal">Project <em>Case Studies</em></h2>
+    <p class="section-intro reveal">
+      Dua proyek nyata dengan sistem administrasi yang dibangun dari nol — 
+      setiap angka yang ditampilkan bersumber dari data aktual yang terverifikasi.
+    </p>
+
+    <!-- PROJECT 1 -->
+    <div class="project-card reveal">
+      <div class="project-header">
+        <div>
+          <div class="project-num">PROJECT 01 · 2025</div>
+          <div class="project-name">Project ABC — Site XYZ</div>
+          <div class="project-meta">Konstruksi Multi-Lantai (LD + L1 + L2) · Jan–Ags 2025 · 8 Bulan</div>
+        </div>
+        <div class="project-badge">IDR 1,294 Miliar</div>
+      </div>
+      <div class="project-tags">
+        <span class="tag">Konstruksi 3 Lantai</span>
+        <span class="tag">32 Item Pekerjaan</span>
+        <span class="tag">8 Bulan</span>
+        <span class="tag">10+ Supplier</span>
+        <span class="tag">100+ Transaksi</span>
+        <span class="tag">Multi-Tax</span>
+      </div>
+      <div class="project-body">
+        <div class="project-cols">
+          <div class="contrib-block">
+            <h4>Kontribusi Teknikal</h4>
+            <ul>
+              <li>Membangun sistem spreadsheet terintegrasi: Master Data (100+ transaksi), GL, Financial Statement, Cashflow, RAB 32 item, BoQ detail, Budget Barang, Input Barang, Rekap, Analisa Supplier, Forecast</li>
+              <li>Mencatat 100+ transaksi lintas 8 bulan dengan 6 tipe ID: OWNER/PO/INV/PMT/UPAH/TAX, setiap transaksi terasosiasi ke cost code pekerjaan (LD/L1/L2)</li>
+              <li>Menyusun RAB 32 item per lantai dengan breakdown Bahan/Upah/Overhead 10%/Profit 10% + PPN 11% + PPh Final 1,75%</li>
+              <li>Memonitor 4 jenis pajak: PPN Masa bulanan, PPh22 (0,5%), PPh Final per lantai, PPh Final kontraktor (1,75%)</li>
+              <li>Membangun FORECAST burn rate IDR 11,839 jt/hari — status SAFE dipertahankan sepanjang seluruh periode proyek</li>
+            </ul>
+          </div>
+          <div class="contrib-block">
+            <h4>Hasil Terukur</h4>
+            <ul>
+              <li>Total kontrak IDR 1.294.211.260 — 3 termin Owner (40%+30%+30%) dari Termin 1 s/d Termin 3</li>
+              <li>Total pengeluaran terkelola IDR 1.041.874.283 — Expense 745,7 jt + Upah 246,4 jt + Operasional 3,5 jt + Tax 46,2 jt</li>
+              <li>Laba bersih proyek: <strong>IDR 252.336.977</strong> (margin ~19,5%)</li>
+              <li>Seluruh 31 item material berstatus HEMAT — efisiensi rata-rata ~20% saving berkat BoQ yang presisi</li>
+              <li>Zero outstanding payable di akhir proyek, cash position IDR 252,3 juta terkonfirmasi</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-kpis">
+          <div class="mini-kpi">
+            <div class="mini-kpi-val">IDR 1,294 Jt</div>
+            <div class="mini-kpi-label">Nilai Kontrak</div>
+          </div>
+          <div class="mini-kpi">
+            <div class="mini-kpi-val" style="color:var(--green)">IDR 252,3 Jt</div>
+            <div class="mini-kpi-label">Laba Bersih</div>
+          </div>
+          <div class="mini-kpi">
+            <div class="mini-kpi-val" style="color:var(--accent2)">~20% Saving</div>
+            <div class="mini-kpi-label">Efisiensi Material</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card reveal">
+      <div class="project-header">
+        <div>
+          <div class="project-num">PROJECT 02 · 2025/2026</div>
+          <div class="project-name">Project XYZ</div>
+          <div class="project-meta">Konstruksi Baja, Kaca &amp; Panel · Sistem 13-Sheet Terintegrasi</div>
+        </div>
+        <div class="project-badge">IDR 322 Juta</div>
+      </div>
+      <div class="project-tags">
+        <span class="tag">Konstruksi Baja</span>
+        <span class="tag">13 Sheet Terintegrasi</span>
+        <span class="tag">19 Item BoQ</span>
+        <span class="tag">60+ Material</span>
+        <span class="tag">5 Supplier</span>
+        <span class="tag">Forecast &amp; Alert</span>
+      </div>
+      <div class="project-body">
+        <div class="project-cols">
+          <div class="contrib-block">
+            <h4>Kontribusi Teknikal</h4>
+            <ul>
+              <li>Membangun 13 sheet terintegrasi: Master Data, GL, Financial Statement, Jurnal Transaksi, Cashflow, RAB, BoQ, Budget Barang, Input Barang, Rekap Barang, Analisa Supplier, Forecast, Dashboard</li>
+              <li>Mencatat 33 transaksi (TRX-001 s/d TRX-033) dengan double-entry bookkeeping: Piutang, Hutang, Persediaan, PPN Masukan/Keluaran, PPh Final, PPh23</li>
+              <li>Menyusun RAB 19 item + BoQ 60+ material dengan rasio Biaya 65%/Upah 25%/Overhead 10%/Profit 10%</li>
+              <li>Membuat sistem REKAP BARANG dengan validasi otomatis HEMAT/BEP/OVERBUDGET per 60+ line item material</li>
+              <li>Membangun FORECAST burn rate harian IDR 1.748.506/hari dengan alert SAFE/WARNING otomatis berbasis sisa budget</li>
+            </ul>
+          </div>
+          <div class="contrib-block">
+            <h4>Hasil Terukur</h4>
+            <ul>
+              <li>Nilai kontrak IDR 322.114.237 dari 3 termin billing (PT Graha Sentosa Abadi)</li>
+              <li>Material terealisasi IDR 134.635.000 dari budget IDR 134.665.000 — <strong>efisiensi 99,97%</strong> (deviasi hanya IDR 30.000)</li>
+              <li>Laba bersih: IDR 165.579.237 (margin ~51,4%)</li>
+              <li>Cash position akhir: IDR 150.769.387, zero outstanding payable</li>
+              <li>Compliance pajak 100%: PPN, PPh Final, PPh23 tercatat dan disetorkan tanpa temuan</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-kpis">
+          <div class="mini-kpi">
+            <div class="mini-kpi-val">IDR 322 Jt</div>
+            <div class="mini-kpi-label">Nilai Kontrak</div>
+          </div>
+          <div class="mini-kpi">
+            <div class="mini-kpi-val" style="color:var(--green)">IDR 165,5 Jt</div>
+            <div class="mini-kpi-label">Laba Bersih</div>
+          </div>
+          <div class="mini-kpi">
+            <div class="mini-kpi-val" style="color:var(--accent2)">99,97%</div>
+            <div class="mini-kpi-label">Budget Accuracy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     SYSTEM ARCHITECTURE
+═════════════════════════════════════════════════════════ -->
+<section id="system">
+  <div class="container">
+    <div class="section-label reveal">Arsitektur Sistem</div>
+    <h2 class="section-title reveal">Spreadsheet <em>System Architecture</em></h2>
+    <p class="section-intro reveal">
+      Setiap modul dibangun modular dengan cross-reference antar sheet. 
+      Kedua proyek menggunakan arsitektur yang konsisten namun skalanya berbeda.
+    </p>
+    <div class="reveal" style="overflow-x:auto">
+      <table class="arch-table">
+        <thead>
+          <tr>
+            <th>Module</th>
+            <th>Project ABC (IDR 1,29 M)</th>
+            <th>Project XYZ (IDR 322 Jt)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Master Data</td>
+            <td>100+ transaksi, 6 tipe ID<br><span class="arch-proj">OWNER / PO / INV / PMT / UPAH / TAX</span></td>
+            <td>33 transaksi, 5 tipe<br><span class="arch-proj">Invoice / PO / Payment / Expense / Tax</span></td>
+          </tr>
+          <tr>
+            <td>Jurnal / GL</td>
+            <td>Double-entry: Piutang, Hutang, Kas, Persediaan, PPN, PPh — balance IDR 2,382 M</td>
+            <td>Double-entry: Piutang, Hutang, Kas, Persediaan, PPN, PPh — balance IDR 1,036 M</td>
+          </tr>
+          <tr>
+            <td>Financial Stmt</td>
+            <td>Pendapatan 1,294 jt · Beban 1,042 jt<br><strong style="color:var(--accent)">Laba IDR 252,3 jt</strong></td>
+            <td>Pendapatan 322 jt · Beban 156 jt<br><strong style="color:var(--accent)">Laba IDR 165,5 jt</strong></td>
+          </tr>
+          <tr>
+            <td>Cash Flow</td>
+            <td>Daily tracking Jan–Ags 2025, 80+ baris aktif per kategori</td>
+            <td>5 milestone tracking, Cash in 322 jt vs Cash out 134 jt</td>
+          </tr>
+          <tr>
+            <td>RAB</td>
+            <td>32 item per lantai + PPN 11% + PPh Final 1,75% per item</td>
+            <td>19 item + rasio Biaya/Upah/Overhead/Profit</td>
+          </tr>
+          <tr>
+            <td>BoQ</td>
+            <td>Per-item material dengan qty, unit, harga satuan, total &amp; total fix (+20%)</td>
+            <td>60+ material per work package + List Barang cross-linked</td>
+          </tr>
+          <tr>
+            <td>Rekap Barang</td>
+            <td>31 item — seluruhnya HEMAT, saving rata-rata ~20%</td>
+            <td>60 item — 1 HEMAT, 59 BEP (deviasi 0%)</td>
+          </tr>
+          <tr>
+            <td>Analisa Supplier</td>
+            <td>Komparasi harga per 31 material</td>
+            <td>Komparasi harga per 60+ material</td>
+          </tr>
+          <tr>
+            <td>Forecast</td>
+            <td>Burn rate IDR 11,839 jt/hari · SAFE sepanjang periode</td>
+            <td>Burn rate IDR 1,748 jt/hari · SAFE → WARNING (akhir proyek)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     FINANCIAL HIGHLIGHTS
+═════════════════════════════════════════════════════════ -->
+<section id="financial">
+  <div class="container">
+    <div class="section-label reveal">Kinerja Keuangan</div>
+    <h2 class="section-title reveal">Financial <em>Highlights</em></h2>
+    <p class="section-intro reveal">
+      Angka-angka di bawah ini bersumber langsung dari data transaksi dan laporan keuangan 
+      yang dikelola sendiri — bukan estimasi.
+    </p>
+    <div class="fin-cards reveal">
+      <div class="fin-card orange">
+        <div class="fin-card-bg">💰</div>
+        <div class="fin-card-label">Total Nilai 2 Proyek</div>
+        <div class="fin-card-val">IDR 1,616 Jt</div>
+        <div class="fin-card-sub">ABC: 1,294 jt + XYZ: 322 jt — dikelola simultan</div>
+      </div>
+      <div class="fin-card green">
+        <div class="fin-card-bg">📈</div>
+        <div class="fin-card-label">Total Laba Gabungan</div>
+        <div class="fin-card-val">IDR 417,9 Jt</div>
+        <div class="fin-card-sub">ABC: 252 jt · XYZ: 165,5 jt</div>
+      </div>
+      <div class="fin-card blue">
+        <div class="fin-card-bg">🏦</div>
+        <div class="fin-card-label">Cash Position Gabungan</div>
+        <div class="fin-card-val">IDR 403,1 Jt</div>
+        <div class="fin-card-sub">ABC: 252 jt · XYZ: 150,7 jt</div>
+      </div>
+      <div class="fin-card orange">
+        <div class="fin-card-bg">🎯</div>
+        <div class="fin-card-label">Budget Accuracy</div>
+        <div class="fin-card-val">99,97–100%</div>
+        <div class="fin-card-sub">Deviasi terkecil IDR 30.000 dari budget IDR 134 jt</div>
+      </div>
+      <div class="fin-card green">
+        <div class="fin-card-bg">🧾</div>
+        <div class="fin-card-label">Tax Compliance</div>
+        <div class="fin-card-val">100%</div>
+        <div class="fin-card-sub">PPN, PPh Final, PPh22, PPh23 — zero audit findings</div>
+      </div>
+      <div class="fin-card blue">
+        <div class="fin-card-bg">📋</div>
+        <div class="fin-card-label">Tipe Dokumen</div>
+        <div class="fin-card-val">8 Tipe</div>
+        <div class="fin-card-sub">OWNER · PO · INV · PMT · UPAH · TAX · BJ · Termin</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     TOOLS
+═════════════════════════════════════════════════════════ -->
+<section id="tools">
+  <div class="container">
+    <div class="section-label reveal">Alat &amp; Software</div>
+    <h2 class="section-title reveal">Tools <em>Proficiency</em></h2>
+    <p class="section-intro reveal">
+      Setiap tools tercantum dengan konteks penggunaan nyata dalam proyek — bukan klaim tanpa bukti.
+    </p>
+    <div class="tools-grid reveal">
+      <div class="tool-row">
+        <div class="tool-icon">📊</div>
+        <div style="flex:1">
+          <div class="tool-name">Google Sheets / Excel</div>
+          <div class="tool-purpose">13+ sheet terintegrasi, multi-sheet cross-reference, double-entry GL, burn rate formula, conditional validation</div>
+        </div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="tool-row">
+        <div class="tool-icon">📦</div>
+        <div style="flex:1">
+          <div class="tool-name">Procurement Management</div>
+          <div class="tool-purpose">PO tracking multi-invoice, DP &amp; pelunasan, payment reconciliation, supplier comparison</div>
+        </div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="tool-row">
+        <div class="tool-icon">📒</div>
+        <div style="flex:1">
+          <div class="tool-name">Akuntansi Proyek</div>
+          <div class="tool-purpose">Double-entry bookkeeping, jurnal transaksi, buku besar, laporan keuangan L/R + Cash</div>
+        </div>
+        <div class="stars">★★★★☆</div>
+      </div>
+      <div class="tool-row">
+        <div class="tool-icon">🎯</div>
+        <div style="flex:1">
+          <div class="tool-name">Budget &amp; Cost Control</div>
+          <div class="tool-purpose">RAB per lantai, BoQ per item, variance analysis HEMAT/BEP/OVERBUDGET otomatis</div>
+        </div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="tool-row">
+        <div class="tool-icon">🧾</div>
+        <div style="flex:1">
+          <div class="tool-name">Tax Administration</div>
+          <div class="tool-purpose">PPN 11%, PPh Final 1,75%, PPh22 0,5%, PPh23 2% — perhitungan &amp; pencatatan sesuai DJP</div>
+        </div>
+        <div class="stars">★★★★☆</div>
+      </div>
+      <div class="tool-row">
+        <div class="tool-icon">📈</div>
+        <div style="flex:1">
+          <div class="tool-name">Forecasting &amp; Reporting</div>
+          <div class="tool-purpose">Burn rate harian, prediksi hari sisa, alert SAFE/WARNING, dashboard KPI eksekutif</div>
+        </div>
+        <div class="stars">★★★★☆</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     CERTIFICATIONS
+═════════════════════════════════════════════════════════ -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-label reveal">Kredensial Resmi</div>
+    <h2 class="section-title reveal">Sertifikasi &amp; <em>Lisensi</em></h2>
+    <p class="section-intro reveal">
+      Dua sertifikasi resmi yang memperkuat kompetensi sebagai Finance &amp; Project Administrator — 
+      dari keahlian manajemen proyek standar global hingga perpajakan Indonesia.
+    </p>
+    <div class="cert-grid reveal">
+
+      <!-- CERT 1: Google PM -->
+      <div class="cert-card">
+        <div class="cert-ribbon">Verified</div>
+        <div class="cert-card-top">
+          <div class="cert-logo">🎓</div>
+          <div>
+            <div class="cert-issuer">Google · Coursera Professional Certificate</div>
+            <div class="cert-name">Google Project Management</div>
+            <div class="cert-date">Apr 9, 2026 · ID: GXOIKT67EX3H</div>
+          </div>
+        </div>
+        <div class="cert-divider"></div>
+        <div class="cert-body">
+          <div class="cert-desc">
+            Menyelesaikan 7 kursus yang dikembangkan langsung oleh Google, mencakup project initiation,
+            planning, execution, hingga Agile Project Management — dengan hands-on, practice-based assessments.
+            Kompeten dalam menginisiasi, merencanakan, dan menjalankan proyek tradisional maupun agile.
+          </div>
+          <div class="cert-tags">
+            <span class="cert-tag">Foundations of PM</span>
+            <span class="cert-tag">Project Initiation</span>
+            <span class="cert-tag">Project Planning</span>
+            <span class="cert-tag">Project Execution</span>
+            <span class="cert-tag">Agile PM</span>
+            <span class="cert-tag">Capstone Real World</span>
+            <span class="cert-tag">AI Job Search</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+            <div>
+              <div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:5px">Relevansi untuk Posisi</div>
+              <div style="font-size:12.5px;color:var(--ink)">Project initiation, scheduling, stakeholder management, risk planning, Agile methodology</div>
+            </div>
+            <a href="https://coursera.org/verify/professional-cert/GXOIKT67EX3H"
+               target="_blank" class="cert-link">
+              🔗 Verify Certificate
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERT 2: Brevet Pajak -->
+      <div class="cert-card">
+        <div class="cert-ribbon green">Lulus</div>
+        <div class="cert-card-top">
+          <div class="cert-logo">📋</div>
+          <div>
+            <div class="cert-issuer">AmanaTax · KKP Taufik Hidayat</div>
+            <div class="cert-name">Brevet Pajak A&amp;B</div>
+            <div class="cert-date">14 Juni 2025 · No. 010/ATBREVETAB/VI/2025</div>
+          </div>
+        </div>
+        <div class="cert-divider"></div>
+        <div class="cert-body">
+          <div class="cert-desc">
+            Lulus Pendidikan &amp; Pelatihan Brevet Pajak A&amp;B — 21 kali pertemuan online (3.780 menit)
+            sejak 9 April s/d 28 Mei 2025. Diselenggarakan oleh KKP Taufik Hidayat (Izin Praktek 
+            KEP-6966/IP.B/PJ/2020). Peserta No. 04.2025.09.010.
+          </div>
+          <div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:10px">Daftar Nilai</div>
+          <div class="cert-scores">
+            <div class="score-item">
+              <div class="score-subj">Ketentuan Umum Perpajakan</div>
+              <div class="score-val a">A — Sangat Baik</div>
+            </div>
+            <div class="score-item">
+              <div class="score-subj">PBB, Bea Materai &amp; BPHTB</div>
+              <div class="score-val aplus">A+ — Amat Sangat Baik</div>
+            </div>
+            <div class="score-item">
+              <div class="score-subj">PPh Badan</div>
+              <div class="score-val aplus">A+ — Amat Sangat Baik</div>
+            </div>
+            <div class="score-item">
+              <div class="score-subj">Akuntansi Perpajakan</div>
+              <div class="score-val aplus">A+ — Amat Sangat Baik</div>
+            </div>
+            <div class="score-item">
+              <div class="score-subj">PPh Pemotongan &amp; Pemungutan</div>
+              <div class="score-val a">A — Sangat Baik</div>
+            </div>
+            <div class="score-item">
+              <div class="score-subj">E-SPT</div>
+              <div class="score-val aplus">A+ — Amat Sangat Baik</div>
+            </div>
+          </div>
+          <div style="font-family:'DM Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:5px">Relevansi untuk Posisi</div>
+          <div style="font-size:12.5px;color:var(--ink)">Langsung diterapkan pada pengelolaan PPN, PPh Final, PPh22, PPh23 di 2 proyek konstruksi aktif</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Summary bar -->
+    <div class="reveal" style="margin-top:24px;padding:24px 28px;background:var(--ink);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="font-size:24px">🏅</div>
+        <div>
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,241,234,.45);margin-bottom:4px">Total Sertifikasi Aktif</div>
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--white)">2 Sertifikasi Resmi · Google PM + Brevet Pajak A&amp;B</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <span style="background:rgba(191,90,22,.15);border:1px solid rgba(191,90,22,.3);color:var(--accent);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px">Google Certified</span>
+        <span style="background:rgba(42,112,72,.15);border:1px solid rgba(42,112,72,.3);color:#5cb88a;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px">Brevet A&amp;B Lulus</span>
+        <span style="background:rgba(26,83,138,.15);border:1px solid rgba(26,83,138,.3);color:#6baed4;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px">Akuntansi Pajak A+</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     VALUE PROPOSITION
+═════════════════════════════════════════════════════════ -->
+<section id="value">
+  <div class="container">
+    <div class="section-label reveal">Nilai Tambah</div>
+    <h2 class="section-title reveal">Professional <em>Value Proposition</em></h2>
+    <p class="section-intro reveal">
+      Tiga alasan utama mengapa saya menjadi pilihan tepat untuk posisi 
+      Finance &amp; Project Administrator di lingkungan konstruksi atau EPC.
+    </p>
+    <div class="vp-list reveal">
+      <div class="vp-item">
+        <div class="vp-num">01</div>
+        <div class="vp-content">
+          <div class="vp-title">Proven Multi-Project Administrator</div>
+          <div class="vp-desc">
+            Terbukti mengelola 2 proyek konstruksi aktif secara simultan dengan total nilai IDR 1,616 miliar — 
+            membangun sistem administrasi keuangan dari nol untuk masing-masing proyek tanpa duplikasi error 
+            dan tanpa temuan audit. Kemampuan ini langsung scalable ke portofolio proyek yang lebih besar.
+          </div>
+        </div>
+      </div>
+      <div class="vp-item">
+        <div class="vp-num">02</div>
+        <div class="vp-content">
+          <div class="vp-title">End-to-End Financial System Builder</div>
+          <div class="vp-desc">
+            Bukan sekadar operator spreadsheet — merancang arsitektur sistem dari RAB/BoQ, procurement tracking, 
+            double-entry GL, cash flow, tax compliance, hingga executive dashboard dalam satu platform kohesif. 
+            Sistem yang dibangun menghasilkan budget accuracy 99,97% dan burn rate monitoring real-time.
+          </div>
+        </div>
+      </div>
+      <div class="vp-item">
+        <div class="vp-num">03</div>
+        <div class="vp-content">
+          <div class="vp-title">Data-Driven Cost Control Specialist</div>
+          <div class="vp-desc">
+            Seluruh keputusan financial didukung data terverifikasi: 31 material Proyek ABC seluruhnya HEMAT 
+            dengan saving ~20%, Proyek XYZ efisiensi 99,97% dari budget. Forecasting berbasis burn rate harian 
+            memungkinkan manajemen melakukan koreksi sebelum overrun terjadi.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     CONTACT
+═════════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <h2 class="contact-title reveal">Ahmad Muhaimin, S.E.</h2>
+    <p class="contact-sub reveal">
+      Finance &amp; Project Administrator · Cost Control Specialist<br>
+      Google PM Certified · Brevet Pajak A&amp;B · Depok, Jawa Barat
+    </p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:16px" class="reveal">
+      <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--rule);color:var(--muted)">S1 Ekonomi</span>
+      <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--rule);color:var(--muted)">Google PM Certified</span>
+      <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--rule);color:var(--muted)">Brevet Pajak A&amp;B</span>
+      <span style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border:1px solid var(--rule);color:var(--muted)">IDR 1,616 Jt Dikelola</span>
+    </div>
+    <div class="contact-btns reveal">
+      <a href="ahmadmuhaimin20000@gmail.com" class="btn btn-primary">✉ Email Saya</a>
+      <a href="https://wa.me/6285121563156" target="_blank" class="btn btn-outline" style="color:var(--ink);border-color:var(--rule)">💬 WhatsApp</a>
+      <a href="https://linkedin.com/in/ahmadmuhaimin" target="_blank" class="btn btn-outline" style="color:var(--ink);border-color:var(--rule)">🔗 LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+═════════════════════════════════════════════════════════ -->
+<footer>
+  <span><span>Ahmad Muhaimin, S.E.</span> · Finance &amp; Project Administrator · Cost Control Specialist</span>
+  <span>Google PM Certified · Brevet Pajak A&amp;B · 2025</span>
+</footer>
+
+<!-- ════════════════════════════════════════════════════════
+     SCRIPTS
+═════════════════════════════════════════════════════════ -->
+<script>
+// ── NAV SCROLL ──────────────────────────────────────────
+const nav = document.getElementById('main-nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// ── MOBILE MENU ─────────────────────────────────────────
+function openMenu() {
+  document.getElementById('mobile-nav').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMenu() {
+  document.getElementById('mobile-nav').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── SCROLL REVEAL ───────────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      // stagger siblings
+      const siblings = e.target.parentElement.querySelectorAll('.reveal');
+      let delay = 0;
+      siblings.forEach(s => {
+        if (s === e.target) {
+          setTimeout(() => s.classList.add('visible'), delay);
+        }
+        delay += 60;
+      });
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── SKILL BAR ANIMATION ──────────────────────────────────
+const skillObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.skill-fill').forEach(bar => {
+        const w = bar.style.width;
+        bar.style.width = '0';
+        bar.style.transition = 'width 1s cubic-bezier(.4,0,.2,1)';
+        setTimeout(() => bar.style.width = w, 200);
+      });
+      skillObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+const skillsGrid = document.querySelector('.skills-grid');
+if (skillsGrid) skillObs.observe(skillsGrid);
+</script>
+</body>
+</html>
